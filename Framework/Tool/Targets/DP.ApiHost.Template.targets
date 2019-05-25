@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project>
+  <PropertyGroup>
+    <PluginPath>..\..\..\DP.Core.V2.DLL\Plugin</PluginPath>
+	<CommonPath>..\..\..\DP.Core.V2.DLL\Common</CommonPath>
+  </PropertyGroup>
+  
+  <PropertyGroup>
+	<AppendTargetFrameworkToOutputPath>false</AppendTargetFrameworkToOutputPath>
+  </PropertyGroup>
+ 
+  <ItemGroup>
+	<PackageReference Include="Microsoft.AspNetCore.Razor.Design" Version="2.1.2" PrivateAssets="All" />
+    <PackageReference Include="Npgsql.EntityFrameworkCore.PostgreSQL" Version="2.1.1" />
+    <PackageReference Include="FluentValidation.AspNetCore" Version="8.1.3" />
+    <PackageReference Include="Newtonsoft.Json" Version="12.0.1" />
+  </ItemGroup>
+  
+  <ItemGroup>
+    <Reference Include="DP.V2.Core.Common">
+      <HintPath>$(CommonPath)\DP.V2.Core.Common.dll</HintPath>
+    </Reference>
+    <Reference Include="DP.V2.Core.Data">
+      <HintPath>$(CommonPath)\DP.V2.Core.Data.dll</HintPath>
+    </Reference>
+    <Reference Include="DP.V2.Core.WebApi">
+      <HintPath>$(CommonPath)\DP.V2.Core.WebApi.dll</HintPath>
+    </Reference>
+    <Reference Include="DP.V2.PLG.Auth">
+      <HintPath>$(PluginPath)\DP.V2.PLG.Auth.dll</HintPath>
+    </Reference>
+    <Reference Include="DP.V2.PLG.Identity">
+      <HintPath>$(PluginPath)\DP.V2.PLG.Identity.dll</HintPath>
+    </Reference>
+    <Reference Include="DP.V2.PLG.Log">
+      <HintPath>$(PluginPath)\DP.V2.PLG.Log.dll</HintPath>
+    </Reference>
+    <Reference Include="DP.V2.PLG.Role">
+      <HintPath>$(PluginPath)\DP.V2.PLG.Role.dll</HintPath>
+    </Reference>
+	<Reference Include="DP.V2.PLG.Route">
+      <HintPath>$(PluginPath)\DP.V2.PLG.Route.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+</Project>

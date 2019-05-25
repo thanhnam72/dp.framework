@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project>
+  <PropertyGroup>
+	<BuildOutput>..\..\..\DP.Core.V2.DLL\Common</BuildOutput>
+  </PropertyGroup>
+ 
+ <PropertyGroup>
+	<AppendTargetFrameworkToOutputPath>false</AppendTargetFrameworkToOutputPath>
+  </PropertyGroup>
+  
+  <Target Name="CopyDLLfile" AfterTargets="Build">
+    <Copy SourceFiles="$(TargetPath)" DestinationFolder="$(BuildOutput)" />
+	<Copy SourceFiles="$(TargetDir)$(TargetName).pdb" DestinationFolder="$(BuildOutput)" />
+	<Copy SourceFiles="$(TargetDir)$(TargetName).deps.json" DestinationFolder="$(BuildOutput)" />
+  </Target>
+</Project>
