@@ -6,7 +6,7 @@ using System;
 
 namespace DP.V2.Core.Data.UoW
 {
-    public class UnitOfWork : IUnitOfWork
+    public class UnitOfWork : IUnitOfWork, IDisposable
     {
         private readonly DbContext _dbContext;
         private readonly IHttpContextAccessor _httpContext;
@@ -27,6 +27,12 @@ namespace DP.V2.Core.Data.UoW
             string log = string.Format("Method: {0}. Input: {1}", method, JsonConvert.SerializeObject(data));
             WriteLog(log);
             return Commit();
+        }
+
+        public void Dispose()
+        {
+            _dbContext.Dispose();
+            GC.SuppressFinalize(this);
         }
 
         public DbContext GetContext()
