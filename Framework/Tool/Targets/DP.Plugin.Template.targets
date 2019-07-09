@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <Project>
   <PropertyGroup>
-    <BuildOutput>..\..\..\DP.Core.V2.DLL\Plugin</BuildOutput>
-	<CommonPath>..\..\..\DP.Core.V2.DLL\Common</CommonPath>
+    <BuildOutput>..\..\..\DP.Lib.V2.DLL\Plugin</BuildOutput>
+	<CommonPath>..\..\..\DP.Lib.V2.DLL\Common</CommonPath>
 	<LibPath>C:\Program Files\dotnet\sdk\NuGetFallbackFolder\microsoft.aspnetcore.mvc.core\2.1.1\lib\netstandard2.0</LibPath>
   </PropertyGroup>
   
